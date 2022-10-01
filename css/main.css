@@ -1,10 +1,51 @@
-.startpage {
+.startpage-container {
   background-image: url(/assets/negative-space-black-forest-dawn.jpg);
   height: 100vh;
   width: 100vw;
-  background-color: blue;
   background-position: center;
   background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .startpage-container {
+    background-position: inherit;
+  }
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.welcome {
+  width: 80vw;
+  height: 100vw;
+  color: white;
+}
+.welcome__heading {
+  margin-bottom: 60px;
+  font-size: 1.7rem;
+}
+.welcome__text {
+  display: block;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+
+.arrow-down {
+  color: white;
+  justify-content: end;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

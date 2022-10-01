@@ -1,8 +1,41 @@
-.startpage {
+@use "mixins" as mix;
+@use "variables" as var;
+
+.startpage-container {
     background-image: url(/assets/negative-space-black-forest-dawn.jpg);
     height: 100vh;
     width: 100vw;
-    background-color: blue;
     background-position: center;
     background-size: cover;
+
+    @include mix.tablet {
+       background-position: inherit;
+    } 
 }
+
+main {
+    height: 100vh;
+    width: 100vw;
+    @include mix.flexcenter;
+    flex-direction: column;
+    text-align: center;
+}
+
+.welcome {
+    width: 80vw;
+    height: 100vw;
+    color: var.$font-light;
+
+    &__heading {
+        margin-bottom: 60px;
+        font-size: 1.7rem;
+    }
+
+    &__text {
+        display: block;
+        margin-top: 30px;
+        font-size: 1.4rem;
+
+    }
+}
+
