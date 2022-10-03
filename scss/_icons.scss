@@ -1,5 +1,10 @@
-.arrow-down {
-color: white;
-justify-content: end;
+.arrow-down, .arrow-down-team {
+    font-size: 2rem;
+}
+
+.bi {
+font-size: 3rem;
+display: inline-block;
+transform: rotate(180deg);
 }
 

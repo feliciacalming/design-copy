@@ -1,0 +1,76 @@
+@use "mixins" as mix;
+@use "variables" as var;
+
+.team,
+h1,
+.tm-rakib,
+.tm-alexandra,
+.tm-lasse,
+.tm-sebastian {
+    @include mix.flexcenter;
+    flex-direction: column;
+    text-align: center; 
+}
+
+.team {
+    font: var.$font-dark;
+    display: grid;
+
+    @include mix.tablet {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+
+    &__about {
+        background-color: var.$color-quotebox;
+        border-radius: 5px;
+        width: 80%;
+        text-align: left;
+        
+    }
+
+    &__text {
+        margin: 20px 30px 30px 30px;
+    }
+}
+
+.tm-rakib,
+.tm-alexandra,
+.tm-lasse,
+.tm-sebastian {
+    margin-bottom: 20px;
+}
+
+
+.tm-rakib {
+    @include mix.tablet {
+    grid-column-start: 1;
+    }
+}
+
+.tm-alexandra {
+    @include mix.tablet {
+    grid-column-start: 2;
+    }
+}
+
+.image-cropper {
+    width: 250px;
+    height: 250px;
+    margin: 0px 0px 25px 0px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 54px 20px, rgba(14, 30, 37, 0.32) 0px 2px 30px 3px;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+.arrow-down-team {
+    color: black;
+}

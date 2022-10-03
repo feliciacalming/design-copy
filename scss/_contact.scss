@@ -1,0 +1,36 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+footer {
+    background-color: black;
+    width: 100%;
+    color: var.$font-light;
+    display: grid;
+    margin-top: 30px;
+
+    @include mix.tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.contact {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.address,
+.mail-phone,
+.soc-med {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin-right: 16%;
+    margin-left: 16%;
+    font-size: 1.5rem;
+
+    &__text {
+        margin-bottom: 15px;
+    }
+
+
+}

@@ -1,5 +1,10 @@
 @use "startpage";
+@use "team";
+@use "contact";
 @use "icons";
+@use "mixins" as mix;
+@use "variables" as var;
+
 
 html, body {
     margin: 0;

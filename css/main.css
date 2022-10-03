@@ -41,6 +41,122 @@ main {
   justify-content: end;
 }
 
+.team,
+h1,
+.tm-rakib,
+.tm-alexandra,
+.tm-lasse,
+.tm-sebastian {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.team {
+  font: black;
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.team__about {
+  background-color: lightgray;
+  border-radius: 5px;
+  width: 80%;
+  text-align: left;
+}
+.team__text {
+  margin: 20px 30px 30px 30px;
+}
+
+.tm-rakib,
+.tm-alexandra,
+.tm-lasse,
+.tm-sebastian {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .tm-rakib {
+    grid-column-start: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tm-alexandra {
+    grid-column-start: 2;
+  }
+}
+
+.image-cropper {
+  width: 250px;
+  height: 250px;
+  margin: 0px 0px 25px 0px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 54px 20px, rgba(14, 30, 37, 0.32) 0px 2px 30px 3px;
+}
+
+img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.arrow-down-team {
+  color: black;
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  color: white;
+  display: grid;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.address,
+.mail-phone,
+.soc-med {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  margin-right: 16%;
+  margin-left: 16%;
+  font-size: 1.5rem;
+}
+.address__text,
+.mail-phone__text,
+.soc-med__text {
+  margin-bottom: 15px;
+}
+
+.arrow-down, .arrow-down-team {
+  font-size: 2rem;
+}
+
+.bi {
+  font-size: 3rem;
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
 html, body {
   margin: 0;
   padding: 0;
