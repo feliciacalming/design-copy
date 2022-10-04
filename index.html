@@ -16,102 +16,116 @@
     <title>Some random page</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="startpage-container">
-        <nav>NAVIGERING</nav>
-        <main>
-          <section class="welcome">
-            <h1 class="welcome__heading">Welcome to nature</h1>
-            <span class="welcome__text">A journey through time and sheep</span>
-            <span class="welcome__text"
-              >To see how ...cotton ... is mage, made I mean...</span
-            >
-          </section>
+    <div class="startpage-container" id="home">
+      <input id="toggle" type="checkbox" />
 
-          <div class="arrow-down">
-            <i class="fa-sharp fa-solid fa-circle-down"></i>
-          </div>
-        </main>
+      <label for="toggle" class="hamburger">
+        <div class="top-bun"></div>
+        <div class="meat"></div>
+        <div class="bottom-bun"></div>
+      </label>
+
+      <div class="nav">
+        <div class="nav-wrapper">
+          <nav>
+            <a href="#home">Hem</a>
+            <a href="#aboutteam">Om</a>
+            <a href="#connect">Kontakt</a>
+          </nav>
+        </div>
       </div>
 
+      <main>
+        <section class="welcome">
+          <h1 class="welcome__heading">Welcome to nature</h1>
+          <span class="welcome__text">A journey through time and sheep</span>
+          <span class="welcome__text"
+            >To see how ...cotton ... is mage, made I mean...</span
+          >
+        </section>
+      </main>
+      <div class="arrow-down">
+        <i class="fa-sharp fa-solid fa-circle-down"></i>
+      </div>
+    </div>
+
+    <section class="team" id="aboutteam">
       <h1>Träffa laget</h1>
-      <section class="team">
-        <section class="tm-rakib">
-          <h4>Rakib</h4>
-          <div class="image-cropper">
-            <img src="/assets/profiles/Rakib_Square.png" alt="Rakib" />
-          </div>
-          <article class="team__about">
-            <p class="team__text">
-              <i class="bi bi-quote"></i>
-              Rakib är vår vassaste node-utvecklare och håller ständigt ett öga
-              på nya tekniker
-            </p>
-          </article>
-        </section>
-
-        <section class="tm-alexandra">
-          <h4>Alexandra</h4>
-          <div class="image-cropper">
-            <img src="/assets/profiles/Alexandra_Square.png" alt="Alexandra" />
-          </div>
-          <article class="team__about">
-            <p class="team__text">
-              <i class="bi bi-quote"></i>
-              Alexandra håller reda på alla överallt och ser till att det flyter
-            </p>
-          </article>
-        </section>
-
-        <section class="tm-lasse">
-          <h4>Lasse</h4>
-          <div class="image-cropper">
-            <img src="assets/profiles/NoPerson_Square.png" alt="Lasse" />
-          </div>
-          <article class="team__about">
-            <p class="team__text">
-              <i class="bi bi-quote"></i>
-              Gör övriga saker... mestadels ...
-            </p>
-          </article>
-        </section>
-
-        <section class="tm-sebastian">
-          <h4>Sebastian</h4>
-          <div class="image-cropper">
-            <img src="assets/profiles/Sebastian_Square.png" alt="Sebastian" />
-          </div>
-          <article class="team__about">
-            <p class="team__text">
-              <i class="bi bi-quote"></i>
-              En av våra utbildare som har stor erfarenhet av ganska många saker
-            </p>
-          </article>
-        </section>
-
-        <div class="arrow-down-team">
-          <i class="fa-sharp fa-solid fa-circle-down"></i>
+      <section class="tm-rakib">
+        <h4>Rakib</h4>
+        <div class="image-cropper">
+          <img src="/assets/profiles/Rakib_Square.png" alt="Rakib" />
         </div>
+        <article class="team__about">
+          <p class="team__text">
+            <i class="bi bi-quote"></i>
+            Rakib är vår vassaste node-utvecklare och håller ständigt ett öga på
+            nya tekniker
+          </p>
+        </article>
       </section>
 
-      <footer>
-        <section class="contact">
-          <section class="address">
-            <span class="address__text">Tegel Consulting AB</span>
-            <span class="address__text">Agatvägen 18</span>
-            <span class="address__text">168 60 Bromma</span>
-          </section>
-          <section class="mail-phone">
-            <span class="mail-phone__text">info at tegelconsulting.se</span>
-            <span class="mail-phone__text">070-123 456 78</span>
-          </section>
-          <section class="soc-med">
-            <span class="soc-med__text">Instagram</span>
-            <span class="soc-med__text">Twitter</span>
-            <span class="soc-med__text">Facebook</span>
-          </section>
+      <section class="tm-alexandra">
+        <h4>Alexandra</h4>
+        <div class="image-cropper">
+          <img src="/assets/profiles/Alexandra_Square.png" alt="Alexandra" />
+        </div>
+        <article class="team__about">
+          <p class="team__text">
+            <i class="bi bi-quote"></i>
+            Alexandra håller reda på alla överallt och ser till att det flyter
+          </p>
+        </article>
+      </section>
+
+      <section class="tm-lasse">
+        <h4>Lasse</h4>
+        <div class="image-cropper">
+          <img src="assets/profiles/NoPerson_Square.png" alt="Lasse" />
+        </div>
+        <article class="team__about">
+          <p class="team__text">
+            <i class="bi bi-quote"></i>
+            Gör övriga saker... mestadels ...
+          </p>
+        </article>
+      </section>
+
+      <section class="tm-sebastian">
+        <h4>Sebastian</h4>
+        <div class="image-cropper">
+          <img src="assets/profiles/Sebastian_Square.png" alt="Sebastian" />
+        </div>
+        <article class="team__about">
+          <p class="team__text">
+            <i class="bi bi-quote"></i>
+            En av våra utbildare som har stor erfarenhet av ganska många saker
+          </p>
+        </article>
+      </section>
+
+      <div class="arrow-down-team">
+        <i class="fa-sharp fa-solid fa-circle-down"></i>
+      </div>
+    </section>
+
+    <footer>
+      <section class="contact" id="connect">
+        <section class="address">
+          <span class="address__text">Tegel Consulting AB</span>
+          <span class="address__text">Agatvägen 18</span>
+          <span class="address__text">168 60 Bromma</span>
         </section>
-      </footer>
-    </div>
+        <section class="mail-phone">
+          <span class="mail-phone__text">info at tegelconsulting.se</span>
+          <span class="mail-phone__text">070-123 456 78</span>
+        </section>
+        <section class="soc-med">
+          <span class="soc-med__text">Instagram</span>
+          <span class="soc-med__text">Twitter</span>
+          <span class="soc-med__text">Facebook</span>
+        </section>
+      </section>
+    </footer>
   </body>
 </html>

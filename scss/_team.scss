@@ -2,7 +2,6 @@
 @use "variables" as var;
 
 .team,
-h1,
 .tm-rakib,
 .tm-alexandra,
 .tm-lasse,
@@ -12,7 +11,7 @@ h1,
     text-align: center; 
 }
 
-.team {
+.team{
     font: var.$font-dark;
     display: grid;
 
