@@ -11,9 +11,10 @@
     text-align: center; 
 }
 
-.team{
+.team {
     font: var.$font-dark;
     display: grid;
+    justify-items: center;
 
     @include mix.tablet {
         grid-template-columns: repeat(2, 1fr);
@@ -30,6 +31,7 @@
     &__text {
         margin: 20px 30px 30px 30px;
     }
+
 }
 
 .tm-rakib,
