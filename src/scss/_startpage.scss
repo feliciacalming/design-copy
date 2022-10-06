@@ -1,0 +1,205 @@
+@use "mixins" as mix;
+@use "variables" as var;
+
+.startpage-container {
+    @include mix.flexcenter;
+    height: 100vh;
+    background-image: url(/src/scss/assets/negative-space-black-forest-dawn.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include mix.tablet {
+       background-position: inherit;
+    } 
+}
+
+header {
+  width: 100%;
+  height: 8vh;
+  background-color: var.$color-nav;
+
+}
+
+
+#toggle {
+    display: none;
+}
+
+
+.hamburger {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    top: 4.6em;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: -80px;
+    padding-bottom: 10px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+
+    @include mix.tablet {
+      display: none;
+    }
+}
+
+
+.hamburger div {
+    position: relative;
+    background-color: var.$color-primary;
+    width: 2.2em;
+    height: 6px;
+    margin-top: 6px;
+    margin-right: 5%;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+
+    @include mix.tablet {
+      display: none;
+    }
+}
+
+
+nav {
+
+  background-color: var.$color-nav;
+
+  @include mix.tablet {
+    background-color: transparent;
+    padding: 20px;
+  }
+}
+
+
+.nav-wrapper {
+    width: 100%;
+    height: min-content;
+    top: -100%; left: 0; right: 0; bottom: 0;
+    margin-top: 8vh;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    @include mix.tablet {
+      margin-top: 0;
+      top: 0;
+      height: 8vh;
+      transform: scale(1);
+      opacity: 1;
+      text-align: right;
+    }
+}
+
+
+nav a {
+    position: relative;
+    display: block;
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    color: var.$color-primary;
+    
+    @include mix.tablet {
+    display: inline;
+    padding: 20px;
+    font-size: 1rem;
+    }
+  }
+
+
+  nav a:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0.25em;
+    background-color: var.$color-primary;
+    left: -0.5em;
+    transition: all 0.2s ease-in-out;
+
+    @include mix.tablet {
+      display: none;
+    }
+  }
+
+  nav a:hover {
+    color: var.$color-primary;
+    text-decoration: underline;
+  }
+
+  nav a:hover:before {
+    height: 100%;
+  }
+  
+  /* Animationer för nav */
+
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+  }
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -7px;
+  }
+  
+  #toggle:checked + .hamburger + .nav-wrapper {
+    top: 0;
+    transform: scale(1);
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+  }
+
+
+main {
+    width: 100%;
+    height: 100%;
+
+    @include mix.flexcenter;
+    text-align: center;
+}
+
+
+.welcome {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    color: var.$color-primary;
+
+    &__heading {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+    &__text {
+        display: block;
+        font-size: 1.6rem;
+
+    }
+
+    @include mix.tablet {
+      &__heading {
+        font-size: 1.5rem;
+      }
+
+      &__text {
+        font-size: 1.1rem;
+      }
+    }
+}
+
+
+.arrow-down {
+    color: var.$color-primary;
+    padding-bottom: 36px;
+    }

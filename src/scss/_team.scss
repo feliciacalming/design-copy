@@ -1,0 +1,83 @@
+@use "mixins" as mix;
+@use "variables" as var;
+
+
+.team > h1 {
+    grid-area: 1 / 1 / 1 / 3;
+
+}
+
+.team {
+    @include mix.flexcenter;
+    text-align: center; 
+    justify-items: center;
+    align-items: center;
+    
+    @include mix.tablet {
+        display: grid;
+        grid-template-columns: auto auto;
+
+    }
+
+    &__rakib, &__alexandra, &__lasse, &__sebastian {
+        margin-bottom: 20px;
+        @include mix.flexcenter;
+        text-align: center; 
+    
+        @include mix.tablet {
+            width: 48vw;
+        }
+
+    }
+    
+    &__about {
+        background-color: var.$color-quotebox;
+        border-radius: 5px;
+        width: 80%;
+        text-align: left;
+             
+    }
+    
+    &__text {
+        margin: 20px 30px 30px 30px;
+
+    }
+    
+}
+
+
+.team__rakib {
+    @include mix.tablet {
+        grid-column-start: 1;
+    }
+}
+
+.team__alexandra {
+    @include mix.tablet {
+        grid-column-start: 2;
+    }
+}
+
+
+.image-cropper {
+    width: 250px;
+    height: 250px;
+    margin: 0px 0px 25px 0px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 54px 20px, rgba(14, 30, 37, 0.32) 0px 2px 30px 3px;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+
+.arrow-down-team {
+    color: var.$color-secondary;
+}

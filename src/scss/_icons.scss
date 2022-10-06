@@ -1,0 +1,40 @@
+@use "mixins" as mix;
+@use "variables" as var;
+
+
+.arrow-down {
+    font-size: 1.7rem;
+    a {
+        color: var.$color-primary;
+    }
+
+    @include mix.tablet {
+        font-size: 1.1rem;
+    }
+} 
+
+.arrow-down-team {
+    font-size: 1.6rem;
+    a {
+    color: var.$color-secondary;
+    }
+
+    @include mix.tablet {
+        font-size: 1.1rem;
+        grid-area: 4 / 1 / 4 / 3;
+    }
+}
+
+.team .bi {
+font-size: 3rem;
+display: inline-block;
+transform: rotate(180deg);
+}
+
+.soc-med__text i {
+ margin-right: 15px;   
+}
+
+.soc-med__text .fa-brands {
+ margin-right: 24px;
+}
