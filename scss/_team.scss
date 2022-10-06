@@ -1,6 +1,11 @@
 @use "mixins" as mix;
 @use "variables" as var;
 
+.team-container {
+    display: flex;
+    text-align: center;
+}
+
 .team,
 .tm-rakib,
 .tm-alexandra,
@@ -13,11 +18,14 @@
 
 .team {
     font: var.$font-dark;
-    display: grid;
+    /*display: grid;*/
     justify-items: center;
+    align-items: center;
 
     @include mix.tablet {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: auto auto;
+        /*grid-template-columns: repeat(2, 1fr);*/
     } 
 
     &__about {
@@ -32,6 +40,10 @@
         margin: 20px 30px 30px 30px;
     }
 
+}
+
+.team > h1 {
+    grid-area: 1 / 1 / 1 / 3;
 }
 
 .tm-rakib,
